@@ -6,20 +6,20 @@ void main() {
       home: Scaffold(
         appBar: AppBar(
           title: 
-            const Text(
-              'I Am Advanturer',
-              style: TextStyle(color: Colors.white),
-            ),
-            backgroundColor: Colors.orange[400],
+          const Text(
+            'I Am Adventurer',
+            style: TextStyle(color: Colors.white),
           ),
-          body: Center(
-            child: Image(
-              image: AssetImage('images/logoadvanturer.png')
-            ),
-          ),
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.orange[400],
         ),
+        body:
+        const Center(
+          child: Image(
+              image: AssetImage('images/logoadventurer.png')
+          ),
+        ),
+        backgroundColor: Colors.white,
       ),
-    );
-  }
-
+    ),
+  );
+}
