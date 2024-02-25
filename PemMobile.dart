@@ -1,5 +1,14 @@
 import 'package:flutter/material.dart';
 
+class MyWidget extends StatelessWidget {
+  const MyWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+
 void main() {
   runApp(
     MaterialApp(
@@ -15,13 +24,13 @@ void main() {
           mainAxisAlignment: MainAxisAlignment.center, // Center vertically
           children: [
             Image(
-              image: AssetImage('assets/images/pemandanganairterjun.jpg'),
+              image: AssetImage('assets/pemandanganairterjun.jpg'),
             ),
             Image(
-              image: AssetImage('assets/images/pemandangankali.jpg'),
+              image: AssetImage('assets/pemandangankali.jpg'),
             ),
             Image(
-              image: AssetImage('assets/images/pemandangankelairpantai.jpg'),
+              image: AssetImage('assets/pemandangankelairpantai.jpg'),
             ),
           ],
         ),
