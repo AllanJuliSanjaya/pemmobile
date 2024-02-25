@@ -15,13 +15,13 @@ void main() {
           mainAxisAlignment: MainAxisAlignment.center, // Center vertically
           children: [
             Image(
-              image: AssetImage('assets/images/pemandanganairterjun.png'),
+              image: AssetImage('assets/images/pemandanganairterjun.jpg'),
             ),
             Image(
-              image: AssetImage('assets/images/pemandangankali.png'),
+              image: AssetImage('assets/images/pemandangankali.jpg'),
             ),
             Image(
-              image: AssetImage('assets/images/pemandangankelairpantai.png'),
+              image: AssetImage('assets/images/pemandangankelairpantai.jpg'),
             ),
           ],
         ),
