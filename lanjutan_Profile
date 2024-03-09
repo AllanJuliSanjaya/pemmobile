@@ -1,48 +1,114 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Kartu Nama Example',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Kartu Nama'),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              KartuNama(
+                foto: AssetImage('assets/allan_photo.jpg'), // Ubah dengan lokasi foto Allan
+                nama: 'Allan Juli Sanjaya', // Nama Allan
+                nim: '22091397052', // NIM Allan
+                prodi: 'D4 Manajemen Informatika', // Prodi Allan
+                email: 'allan.22052@mhs.unesa.ac.id', // Email Allan
+              ),
+              SizedBox(height: 20),
+              KartuNama(
+                foto: AssetImage('assets/rachmadhan_photo.jpg'), // Ubah dengan lokasi foto Rachmadhan
+                nama: 'Rachmadhan Nauval Hidayat Akbar', // Nama Rachmadhan
+                nim: '22091397072', // NIM Rachmadhan
+                prodi: 'D4 Manajemen Informatika', // Prodi Rachmadhan
+                email: 'rachmadan.22072@mhs.unesa.ac.id', // Email Rachmadhan
+              ),
+              SizedBox(height: 20),
+              KartuNama(
+                foto: AssetImage('assets/andika_photo.jpg'), // Ubah dengan lokasi foto Andika
+                nama: 'Andika Rafael Sitorus', // Nama Andika
+                nim: '2205102044', // NIM Andika
+                prodi: 'PMM D4 Manajemen Informatika', // Prodi Andika
+                email: 'andika.232139001@mhs.unesa.ac.id', // Email Andika
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class KartuNama extends StatelessWidget {
   final ImageProvider foto;
   final String nama;
-  final String alamat;
+  final String nim;
+  final String prodi;
+  final String email;
 
   const KartuNama({
     Key? key,
     required this.foto,
     required this.nama,
-    required this.alamat,
+    required this.nim,
+    required this.prodi,
+    required this.email,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: 300,
-        height: 200,
-        padding: EdgeInsets.all(16),
-    decoration: BoxDecoration(
-    color: Colors.grey[200],
-    borderRadius: BorderRadius.circular(10),
-    ),
-    child: Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-    CircleAvatar(
-    radius: 40,
-    backgroundImage: foto,
-    ),
-    SizedBox(height: 10),
-    Text(
-    nama,
-    style: TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeight.bold,
-    ),
-    ),
-      SizedBox(height: 5),
-      Text(
-        alamat,
-        style: TextStyle(fontSize: 16),
-        textAlign: TextAlign.center,
+      width: 300,
+      height: 280,
+      padding: EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.grey[200],
+        borderRadius: BorderRadius.circular(10),
       ),
-    ],
-    ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CircleAvatar(
+            radius: 40,
+            backgroundImage: foto,
+          ),
+          SizedBox(height: 10),
+          Text(
+            nama,
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 5),
+          Text(
+            'NIM: $nim',
+            style: TextStyle(fontSize: 16),
+          ),
+          SizedBox(height: 5),
+          Text(
+            'Prodi: $prodi',
+            style: TextStyle(fontSize: 16),
+          ),
+          SizedBox(height: 5),
+          Text(
+            'Email: $email',
+            style: TextStyle(fontSize: 16),
+          ),
+        ],
+      ),
     );
   }
 }
