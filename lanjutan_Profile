@@ -1,0 +1,48 @@
+class KartuNama extends StatelessWidget {
+  final ImageProvider foto;
+  final String nama;
+  final String alamat;
+
+  const KartuNama({
+    Key? key,
+    required this.foto,
+    required this.nama,
+    required this.alamat,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        width: 300,
+        height: 200,
+        padding: EdgeInsets.all(16),
+    decoration: BoxDecoration(
+    color: Colors.grey[200],
+    borderRadius: BorderRadius.circular(10),
+    ),
+    child: Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+    CircleAvatar(
+    radius: 40,
+    backgroundImage: foto,
+    ),
+    SizedBox(height: 10),
+    Text(
+    nama,
+    style: TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    ),
+    ),
+      SizedBox(height: 5),
+      Text(
+        alamat,
+        style: TextStyle(fontSize: 16),
+        textAlign: TextAlign.center,
+      ),
+    ],
+    ),
+    );
+  }
+}
